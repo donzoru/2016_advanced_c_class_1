@@ -25,25 +25,25 @@ private:
 };
 int main()
 {
-    char s[50],m;
+    char s,m;
     int k=0;
     float a[4]={0},t=1;
     bool n=0;
-    for(int i=0;*(s+i)=getchar();++i)
+    for(int i=0;s=getchar();++i)
     {
-        if(isblank(*(s+i)) && k<4)
+        if(isblank(s) && k<4)
         {
             a[k++]/=t;
             n=0;
             t=1;
         }
         if(n) t*=10;
-        if(*(s+i)=='-') t*=-1;
-        if(*(s+i)=='.') n=true;
-        if(isdigit(*(s+i)))
-            a[k]=a[k]*10+*(s+i)-'0';
-        if(*(s+i)=='a' || *(s+i)=='s') {
-            m=*(s+i);
+        if(s=='-') t*=-1;
+        if(s=='.') n=true;
+        if(isdigit(s))
+            a[k]=a[k]*10+s-'0';
+        if(s=='a' || s=='s') {
+            m=s;
             break;
         }
     }
