@@ -29,7 +29,7 @@ int main()
     int k=0;
     float a[4]={0},t=1;
     bool n=0;
-    for(int i=0;s=getchar();++i)
+    while(s=getchar())
     {
         if(isblank(s) && k<4)
         {
